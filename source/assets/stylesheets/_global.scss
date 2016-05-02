@@ -1,19 +1,37 @@
-body {
-  background-color: $light-gray;
-  color: $medium-gray;
+#cnt1 {
+    background-color: rgba(215, 212, 212, 0.88);
+    width: 100vw;
+    height: 100vh;
 }
 
-.delete-me {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
+#panel1 {
+    top: 20vh;
+    left: 20vw;
+    display:inline-block;
+}
 
-  .container {
-    text-align: center;
+.panel-body:not(.two-col) {
+    padding: 0px;
+}
 
-    h1 {
-      font-weight: 200;
-    }
-  }
+.panel-body .radio, .panel-body .checkbox {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.panel-body .list-group {
+    margin-bottom: 0;
+}
+
+.margin-bottom-none {
+    margin-bottom: 0;
+}
+
+.next-button-section {
+    text-align: right;
+}
+
+
+%button {
+    display:inline-block;
 }

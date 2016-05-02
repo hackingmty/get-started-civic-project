@@ -1,11 +1,136 @@
 ---
-title: Page Title
+title: Trae tu idea a Codeando Monterrey
 ---
 
-.delete-me
-  .container
-    %h1 thoughtbot Middleman Starter
-    %p
-      You're all set!
-      <a href="http://github.com/thoughtbot/proteus-middleman">Let's get started</a>
-      building your prototype.
+!!!
+%html
+  %head
+    %meta{charset: "utf-8"}
+    %meta{content: "IE=edge,chrome=1", http: {equiv: "X-UA-Compatible"}}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
+    %title= current_page.data.title || "Cívica Digital"
+    = stylesheet_link_tag "//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+
+  %body{class: page_classes}
+    = javascript_include_tag "//code.jquery.com/jquery-2.1.1.min.js"
+    = javascript_include_tag "//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+
+    #cnt1.container
+      #panel1.col-md-6
+        .panel.panel-default
+          .panel-heading
+            %h3.panel-title
+              %span.fa.fa-question-circle
+              Trae tu idea a Codeando Monterrey
+          .panel-body.two-col
+            .row
+              .col-md-12
+                %ul#tabs.nav.nav-tabs{"data-tabs" => "tabs"}
+                  %li.active
+                    %a{"data-toggle" => "tab", :href => "#challenge"} Plantea el Objetivo
+                  %li
+                    %a{"data-toggle" => "tab", :href => "#done"} ¿Se ha hecho antes?
+                  %li
+                    %a{"data-toggle" => "tab", :href => "#success"} Establece un criterio de Éxito
+                  %li
+                    %a{"data-toggle" => "tab", :href => "#about"} Dinos todo lo que nos puedas decir
+                  %li
+                    %a{"data-toggle" => "tab", :href => "#check"} Revisa tu objetivo, Considera:
+                  %li
+                    %a{"data-toggle" => "tab", :href => "#jargon"} Quítale el rollo a tu objetivo.
+                  %li
+                    %a{"data-toggle" => "tab", :href => "#subdivide"} Destila tu objetivo, y envíanos tu problema
+                  %li
+                    %a{"data-toggle" => "tab", :href => "#sent"} Objetivo Envíado
+                .col-md-12
+                  .well.well-sm
+                    #my-tab-content.tab-content
+                      #challenge.tab-pane.active
+                        %h1 Plantea el Objetivo
+                        %p ¿Con que quieres empezar una aplicación cívica? Suena increíble, esperamos
+                        que este sea el inicio de una gran colaboración entre la comunidad
+                        para soñar juntos.
+                        %p En pocas palabras, ¿Qué quieres hacer?
+                        .next-button-section
+                          %a{"data-toggle" => "tab", :href => "#done"}
+                            %button.btn.btn-default{"aria-label" => "Left Align", :type => "button"}
+                              Siguiente paso(2/7): ¿Se ha hecho antes? >>
+                      #done.tab-pane
+                        %h1 ¿Se habrá hecho antes?
+                        %p Ahora que has planteado el objetivo, ¿Estás seguro que no se ha hecho antes?
+                        .table-responsive
+                          .col-md-12
+                            .col-md-6
+                              Github
+                            .col-md-6
+                              Google
+                          .col-md-12
+                            .col-md-6
+                              Google Scholar
+                            .col-md-6
+                              Apple y Android store
+                        .next-button-section
+                          %a{"data-toggle" => "tab", :href => "#success"}
+                            %button.btn.btn-default{"aria-label" => "Left Align", :type => "button"}
+                              Siguiente paso(3/7): Establece un criterio de Éxito >>
+                      #success.tab-pane
+                        %h1 Define un criterio de éxito
+                        %p Todos queremos salvar al mundo, pero: ¿Cuál sería la menor unidad
+                        medida para definir que tu proyecto es exitoso, y cual sería la meta
+                        a alcanzar con respecto a ella?
+                        .next-button-section
+                          %a{"data-toggle" => "tab", :href => "#about"}
+                            %button.btn.btn-default{"aria-label" => "Left Align", :type => "button"}
+                              Siguiente paso(4/7): Dinos todo lo que nos puedas decir >>
+                      #about.tab-pane
+                        %h1 Dinos todo lo que nos puedas decir sobre el entorno del problema
+                        %p ¿Tienes mucho que decir sobre el problema que quieres resolver? Crea una carpeta
+                        en nuestro google drive y dejanos todos los artículos
+                        %br
+                        %a{:href=>"null"} Ir a drive
+                        .next-button-section
+                          %a{"data-toggle" => "tab", :href => "#check"}
+                            %button.btn.btn-default{"aria-label" => "Left Align", :type => "button"}
+                              Siguiente paso(5/7): Re-Revisa tu objetivo >>
+                      #check.tab-pane
+                        %h1 Re-Revisa tu objetivo
+                        %p Es importantísimo que contemos con todo tu apoyo para que el proyecto sea factible,
+                        Cinco pasos son especialmente útiles para lograr esto:
+                        .table-responsive
+                          .col-md-12
+                            .row
+                              %p Delimitar el objetivo
+                            .row
+                              %p Convertirlo a ser fácilmente accionable
+                            .row
+                              %p Hacerlo suficientemente específico
+                            .row
+                              %p Entregarle el apoyo de la Organización
+                            .row
+                              %p Asignar un campeón de la organización
+                        .next-button-section
+                          %a{"data-toggle" => "tab", :href => "#jargon"}
+                            %button.btn.btn-default{"aria-label" => "Left Align", :type => "button"}
+                              Siguiente paso(6/7): Quítale el rollo a tu objetivo >>
+                      #jargon.tab-pane
+                        %h1 Quitale el rollo a tu objetivo
+                        %p Quítale las palabras rebuscadas, las explicaciones que se verían
+                        mejor en tu drive.
+                        .next-button-section
+                          %a{"data-toggle" => "tab", :href => "#subdivide"}
+                            %button.btn.btn-default{"aria-label" => "Left Align", :type => "button"}
+                              Siguiente paso(7/7): Destila tu objetivo, y envíanos tu problema >>
+                      #subdivide.tab-pane
+                        %h1 Enfócate en cumplir un objetivo con tu proyecto, y envíanoslo.
+                        %p  Si tu proyecto tiene varios ejes, o posibles mútiples etapas
+                        envíanos el objetivo más pequeño para ganar rápido y empezar
+                        a construir.
+                        .next-button-section
+                          %a{"data-toggle" => "tab", :href => "#sent"}
+                            %button.btn.btn-default{"aria-label" => "Left Align", :type => "button"}
+                              Terminar: Envíanos tu objetivo >>
+                      #sent.tab-pane
+                        %h1 Objetivo Envíado
+                        %p  Muchas gracias, Ya quedó añadido tu objetivo en la lista de proyectos
+                        de Codeando Monterrey. Solo quedará estar al pendiente de que la comunidad
+                        lo tome, o ve a uno de nuestros eventos para reclutar a un equipo.
