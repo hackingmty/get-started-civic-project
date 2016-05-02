@@ -25,7 +25,9 @@ title: Trae tu idea a Codeando Monterrey
           .panel-body.two-col
             .row
               .col-md-12
-                %ul#tabs.nav.nav-tabs{"data-tabs" => "tabs"}
+                %ul#tabs.nav.nav-tabs{"data-tabs" => "tabs", "style" =>"display:none;"}
+                  %li.active
+                    %a{"data-toggle" => "tab", :href => "#intro"} Introducción
                   %li.active
                     %a{"data-toggle" => "tab", :href => "#challenge"} Plantea el Objetivo
                   %li
@@ -45,11 +47,19 @@ title: Trae tu idea a Codeando Monterrey
                 .col-md-12
                   .well.well-sm
                     #my-tab-content.tab-content
-                      #challenge.tab-pane.active
-                        %h1 Plantea el Objetivo
+                      #intro.tab-pane.active
+                        %h1 Bienvenido
                         %p ¿Con que quieres empezar una aplicación cívica? Suena increíble, esperamos
                         que este sea el inicio de una gran colaboración entre la comunidad
                         para soñar juntos.
+                        %p En unos cortos, pero potentes pasos, buscaremos afianzar el objetivo de tu proyecto.
+                        %p Esperamos ayudarte mucho
+                        .next-button-section
+                          %a{"data-toggle" => "tab", :href => "#challenge"}
+                            %button.btn.btn-default{"aria-label" => "Left Align", :type => "button"}
+                              Siguiente paso(1/7): Plantea el Objetivo >>
+                      #challenge.tab-pane
+                        %h1 Plantea el Objetivo
                         %p En pocas palabras, ¿Qué quieres hacer?
                         .next-button-section
                           %a{"data-toggle" => "tab", :href => "#done"}
