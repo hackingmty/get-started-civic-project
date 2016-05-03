@@ -61,8 +61,9 @@ title: Trae tu idea a Codeando Monterrey
                       #challenge.tab-pane
                         %h1 Plantea el Objetivo
                         %p En pocas palabras, ¿Qué quieres hacer?
+                        %textarea#initial_challenge{"rows"=>"5", "cols"=>"20"}
                         .next-button-section
-                          %a{"data-toggle" => "tab", :href => "#done"}
+                          %a{"data-toggle" => "tab", :href => "#done", :onclick =>"setText('#initial_challenge','#check_challenge')"}
                             %button.btn.btn-default{"aria-label" => "Left Align", :type => "button"}
                               Siguiente paso(2/7): ¿Se ha hecho antes? >>
                       #done.tab-pane
@@ -88,6 +89,14 @@ title: Trae tu idea a Codeando Monterrey
                         %p Todos queremos salvar al mundo, pero: ¿Cuál sería la menor unidad
                         medida para definir que tu proyecto es exitoso, y cual sería la meta
                         a alcanzar con respecto a ella?
+                        .table-responsive
+                          .col-md-12
+                            .col-md-6
+                              %p Criterio de Éxito
+                              %input#success_criteria{"type"=>"text"}
+                            .col-md-6
+                              %p Meta
+                              %input#success_goal{"type"=>"text"}
                         .next-button-section
                           %a{"data-toggle" => "tab", :href => "#about"}
                             %button.btn.btn-default{"aria-label" => "Left Align", :type => "button"}
@@ -98,43 +107,41 @@ title: Trae tu idea a Codeando Monterrey
                         en nuestro google drive y dejanos todos los artículos
                         %br
                         %a{:href=>"null"} Ir a drive
+                        %p Dirección del Drive
+                        %input#drive_url{"type"=>"text"}
                         .next-button-section
                           %a{"data-toggle" => "tab", :href => "#check"}
                             %button.btn.btn-default{"aria-label" => "Left Align", :type => "button"}
                               Siguiente paso(5/7): Re-Revisa tu objetivo >>
                       #check.tab-pane
                         %h1 Re-Revisa tu objetivo
-                        %p Es importantísimo que contemos con todo tu apoyo para que el proyecto sea factible,
-                        Cinco pasos son especialmente útiles para lograr esto:
-                        .table-responsive
-                          .col-md-12
-                            .row
-                              %p Delimitar el objetivo
-                            .row
-                              %p Convertirlo a ser fácilmente accionable
-                            .row
-                              %p Hacerlo suficientemente específico
-                            .row
-                              %p Entregarle el apoyo de la Organización
-                            .row
-                              %p Asignar un campeón de la organización
+                        %p Es importantísimo que contemos con todo tu apoyo para que el proyecto sea factible, tanto en hacer el objetivo que has planteado alcanzable como darle el apoyo de tu organización.  Para eso, tres pasos son necesarios:
+                        %ul
+                          %li Delimita el objetivo, convertirlo a ser fácilmente accionable y hazlo suficientemente específico
+                          %li Entregarle el apoyo de la Organización
+                          %li Asignar un campeón de la organización
+                          %p Revisa tu objetivo
+                          %textarea#check_challenge{"rows"=>"5", "cols"=>"20"}
+                          %p ¿Qué organización estará detrás de este proyecto?
+                          %input#organization_name{"type"=>"text"}
+                          %p ¿Cuál es el correo electrónico de la persona que estará encargada del proyecto dentro de la organización?
+                          %input#organization_owner{"type"=>"text"}
                         .next-button-section
-                          %a{"data-toggle" => "tab", :href => "#jargon"}
+                          %a{"data-toggle" => "tab", :href => "#jargon", :onclick =>"setText('#check_challenge','#jargon_challenge')"}
                             %button.btn.btn-default{"aria-label" => "Left Align", :type => "button"}
                               Siguiente paso(6/7): Quítale el rollo a tu objetivo >>
                       #jargon.tab-pane
                         %h1 Quitale el rollo a tu objetivo
-                        %p Quítale las palabras rebuscadas, las explicaciones que se verían
-                        mejor en tu drive.
+                        %p Quítale las palabras rebuscadas, las explicaciones detalladas van en el drive.
+                        %textarea#jargon_challenge{"rows"=>"5", "cols"=>"20"}
                         .next-button-section
-                          %a{"data-toggle" => "tab", :href => "#subdivide"}
+                          %a{"data-toggle" => "tab", :href => "#subdivide", :onclick =>"setText('#jargon_challenge','#final_challenge')"}
                             %button.btn.btn-default{"aria-label" => "Left Align", :type => "button"}
                               Siguiente paso(7/7): Destila tu objetivo, y envíanos tu problema >>
                       #subdivide.tab-pane
                         %h1 Enfócate en cumplir un objetivo con tu proyecto, y envíanoslo.
-                        %p  Si tu proyecto tiene varios ejes, o posibles mútiples etapas
-                        envíanos el objetivo más pequeño para ganar rápido y empezar
-                        a construir.
+                        %p  Si tu proyecto tiene varios ejes, o posibles mútiples etapas envíanos el objetivo más pequeño para ganar rápido y empezar a construir.
+                        %textarea#final_challenge{"rows"=>"5", "cols"=>"20"}
                         .next-button-section
                           %a{"data-toggle" => "tab", :href => "#sent"}
                             %button.btn.btn-default{"aria-label" => "Left Align", :type => "button"}
