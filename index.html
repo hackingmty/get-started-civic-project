@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <title>Trae tu idea a Codeando Monterrey</title>
+    <link href="assets/stylesheets/application.css" rel="stylesheet" />
+  </head>
+  <body class='index'>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset='utf-8'>
+        <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+        <meta content='width=device-width, initial-scale=1' name='viewport'>
+        <title>Trae tu idea a Codeando Monterrey</title>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+      </head>
+      <body class='index'>
+        <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <div class='container' id='cnt1'>
+          <div class='col-md-6' id='panel1'>
+            <div class='panel panel-default'>
+              <div class='panel-heading'>
+                <h3 class='panel-title'>
+                  <span class='fa fa-question-circle'></span>
+                  Trae tu idea a Codeando Monterrey
+                </h3>
+              </div>
+              <div class='panel-body two-col'>
+                <div class='row'>
+                  <div class='col-md-12'>
+                    <ul class='nav nav-tabs' data-tabs='tabs' id='tabs' style='display:none;'>
+                      <li class='active'>
+                        <a data-toggle='tab' href='#intro'>Introducción</a>
+                      </li>
+                      <li class='active'>
+                        <a data-toggle='tab' href='#challenge'>Plantea el Objetivo</a>
+                      </li>
+                      <li>
+                        <a data-toggle='tab' href='#done'>¿Se ha hecho antes?</a>
+                      </li>
+                      <li>
+                        <a data-toggle='tab' href='#success'>Establece un criterio de Éxito</a>
+                      </li>
+                      <li>
+                        <a data-toggle='tab' href='#about'>Dinos todo lo que nos puedas decir</a>
+                      </li>
+                      <li>
+                        <a data-toggle='tab' href='#check'>Revisa tu objetivo, Considera:</a>
+                      </li>
+                      <li>
+                        <a data-toggle='tab' href='#jargon'>Quítale el rollo a tu objetivo.</a>
+                      </li>
+                      <li>
+                        <a data-toggle='tab' href='#subdivide'>Destila tu objetivo, y envíanos tu problema</a>
+                      </li>
+                      <li>
+                        <a data-toggle='tab' href='#sent'>Objetivo Envíado</a>
+                      </li>
+                    </ul>
+                    <div class='col-md-12'>
+                      <div class='well well-sm'>
+                        <div class='tab-content' id='my-tab-content'>
+                          <div class='tab-pane active' id='intro'>
+                            <h1>Bienvenido</h1>
+                            <p>¿Con que quieres empezar una aplicación cívica? Suena increíble, esperamos</p>
+                            que este sea el inicio de una gran colaboración entre la comunidad
+                            para soñar juntos.
+                            <p>En unos cortos, pero potentes pasos, buscaremos afianzar el objetivo de tu proyecto.</p>
+                            <p>Esperamos ayudarte mucho</p>
+                            <div class='next-button-section'>
+                              <a data-toggle='tab' href='#challenge'>
+                                <button aria-label='Left Align' class='btn btn-default' type='button'>
+                                  Siguiente paso(1/7): Plantea el Objetivo >>
+                                </button>
+                              </a>
+                            </div>
+                          </div>
+                          <div class='tab-pane' id='challenge'>
+                            <h1>Plantea el Objetivo</h1>
+                            <p>En pocas palabras, ¿Qué quieres hacer?</p>
+                            <textarea cols='20' id='initial_challenge' rows='5'></textarea>
+                            <div class='next-button-section'>
+                              <a data-toggle='tab' href='#done' onclick="setText('#initial_challenge','#check_challenge')">
+                                <button aria-label='Left Align' class='btn btn-default' type='button'>
+                                  Siguiente paso(2/7): ¿Se ha hecho antes? >>
+                                </button>
+                              </a>
+                            </div>
+                          </div>
+                          <div class='tab-pane' id='done'>
+                            <h1>¿Se habrá hecho antes?</h1>
+                            <p>Ahora que has planteado el objetivo, ¿Estás seguro que no se ha hecho antes?</p>
+                            <div class='table-responsive'>
+                              <div class='col-md-12'>
+                                <div class='col-md-6'>
+                                  Github
+                                </div>
+                                <div class='col-md-6'>
+                                  Google
+                                </div>
+                              </div>
+                              <div class='col-md-12'>
+                                <div class='col-md-6'>
+                                  Google Scholar
+                                </div>
+                                <div class='col-md-6'>
+                                  Apple y Android store
+                                </div>
+                              </div>
+                            </div>
+                            <div class='next-button-section'>
+                              <a data-toggle='tab' href='#success'>
+                                <button aria-label='Left Align' class='btn btn-default' type='button'>
+                                  Siguiente paso(3/7): Establece un criterio de Éxito >>
+                                </button>
+                              </a>
+                            </div>
+                          </div>
+                          <div class='tab-pane' id='success'>
+                            <h1>Define un criterio de éxito</h1>
+                            <p>Todos queremos salvar al mundo, pero: ¿Cuál sería la menor unidad</p>
+                            medida para definir que tu proyecto es exitoso, y cual sería la meta
+                            a alcanzar con respecto a ella?
+                            <div class='table-responsive'>
+                              <div class='col-md-12'>
+                                <div class='col-md-6'>
+                                  <p>Criterio de Éxito</p>
+                                  <input id='success_criteria' type='text'>
+                                </div>
+                                <div class='col-md-6'>
+                                  <p>Meta</p>
+                                  <input id='success_goal' type='text'>
+                                </div>
+                              </div>
+                            </div>
+                            <div class='next-button-section'>
+                              <a data-toggle='tab' href='#about'>
+                                <button aria-label='Left Align' class='btn btn-default' type='button'>
+                                  Siguiente paso(4/7): Dinos todo lo que nos puedas decir >>
+                                </button>
+                              </a>
+                            </div>
+                          </div>
+                          <div class='tab-pane' id='about'>
+                            <h1>Dinos todo lo que nos puedas decir sobre el entorno del problema</h1>
+                            <p>¿Tienes mucho que decir sobre el problema que quieres resolver? Crea una carpeta</p>
+                            en nuestro google drive y dejanos todos los artículos
+                            <br>
+                            <a href='null'>Ir a drive</a>
+                            <p>Dirección del Drive</p>
+                            <input id='drive_url' type='text'>
+                            <div class='next-button-section'>
+                              <a data-toggle='tab' href='#check'>
+                                <button aria-label='Left Align' class='btn btn-default' type='button'>
+                                  Siguiente paso(5/7): Re-Revisa tu objetivo >>
+                                </button>
+                              </a>
+                            </div>
+                          </div>
+                          <div class='tab-pane' id='check'>
+                            <h1>Re-Revisa tu objetivo</h1>
+                            <p>Es importantísimo que contemos con todo tu apoyo para que el proyecto sea factible, tanto en hacer el objetivo que has planteado alcanzable como darle el apoyo de tu organización.  Para eso, tres pasos son necesarios:</p>
+                            <ul>
+                              <li>Delimita el objetivo, convertiertelo a ser fácilmente accionable y hazlo suficientemente específico</li>
+                              <li>Entregarle el apoyo de la Organización</li>
+                              <li>Asignar un campeón de la organización</li>
+                              <p>Revisa tu objetivo</p>
+                              <textarea cols='20' id='check_challenge' rows='5'></textarea>
+                              <p>¿Qué organización estará detrás de este proyecto?</p>
+                              <input id='organization_name' type='text'>
+                              <p>¿Cuál es el correo electrónico de la persona que estará encargada del proyecto dentro de la organización?</p>
+                              <input id='organization_owner' type='text'>
+                            </ul>
+                            <div class='next-button-section'>
+                              <a data-toggle='tab' href='#jargon' onclick="setText('#check_challenge','#jargon_challenge')">
+                                <button aria-label='Left Align' class='btn btn-default' type='button'>
+                                  Siguiente paso(6/7): Quítale el rollo a tu objetivo >>
+                                </button>
+                              </a>
+                            </div>
+                          </div>
+                          <div class='tab-pane' id='jargon'>
+                            <h1>Quitale el rollo a tu objetivo</h1>
+                            <p>Quítale las palabras rebuscadas, las explicaciones detalladas van en el drive.</p>
+                            <textarea cols='20' id='jargon_challenge' rows='5'></textarea>
+                            <div class='next-button-section'>
+                              <a data-toggle='tab' href='#subdivide' onclick="setText('#jargon_challenge','#final_challenge')">
+                                <button aria-label='Left Align' class='btn btn-default' type='button'>
+                                  Siguiente paso(7/7): Destila tu objetivo, y envíanos tu problema >>
+                                </button>
+                              </a>
+                            </div>
+                          </div>
+                          <div class='tab-pane' id='subdivide'>
+                            <h1>Enfócate en cumplir un objetivo con tu proyecto, y envíanoslo.</h1>
+                            <p>Si tu proyecto tiene varios ejes, o posibles mútiples etapas envíanos el objetivo más pequeño para ganar rápido y empezar a construir.</p>
+                            <textarea cols='20' id='final_challenge' rows='5'></textarea>
+                            <div class='next-button-section'>
+                              <a data-toggle='tab' href='#sent'>
+                                <button aria-label='Left Align' class='btn btn-default' type='button'>
+                                  Terminar: Envíanos tu objetivo >>
+                                </button>
+                              </a>
+                            </div>
+                          </div>
+                          <div class='tab-pane' id='sent'>
+                            <h1>Objetivo Envíado</h1>
+                            <p>Muchas gracias, Ya quedó añadido tu objetivo en la lista de proyectos</p>
+                            de Codeando Monterrey. Solo quedará estar al pendiente de que la comunidad
+                            lo tome, o ve a uno de nuestros eventos para reclutar a un equipo.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </body>
+    </html>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="assets/javascripts/application.js"></script>
+  </body>
+</html>
