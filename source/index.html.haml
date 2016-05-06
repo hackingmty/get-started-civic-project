@@ -25,7 +25,7 @@ title: Trae tu idea a Codeando Monterrey
           .panel-body.two-col
             .row
               .col-md-12
-                %ul#tabs.nav.nav-tabs{"data-tabs" => "tabs", "style" =>"display:none;"}
+                %ul#tabs.nav.nav-tabs{"data-tabs" => "tabs", "style" =>"display:non"}
                   %li.active
                     %a{"data-toggle" => "tab", :href => "#intro"} Introducción
                   %li.active
@@ -60,6 +60,8 @@ title: Trae tu idea a Codeando Monterrey
                               Siguiente paso(1/7): Plantea el Objetivo >>
                       #challenge.tab-pane
                         %h1 Plantea el Objetivo
+                        %p ¿Cómo se llama tu proyecto?
+                        %input#project_name{"type"=>"text"}
                         %p En pocas palabras, ¿Qué quieres hacer?
                         %textarea#initial_challenge{"rows"=>"5", "cols"=>"20"}
                         .next-button-section

@@ -1,85 +1,27 @@
 # thoughtbot Middleman Starter
 
-## About
-
-This starter kit for Middleman follows the
-[thoughtbot styleguide](https://github.com/thoughtbot/guides) and includes our
-favorite front end tools.
-
-## About Middleman
-
-Middleman is a static site generator built in Ruby. This makes it a great fit
-for projects that may end up as a Ruby on Rails app. Its minimalistic structure
-makes it very easy to work with, and includes support for deploying to Github
-Pages.
-
-## Includes
-
-* [HAML](http://haml.info):
-  Simple template markup
-* [Coffeescript](http://coffeescript.org):
-  Write javascript with simpler syntax
-* [Sass (LibSass)](http://sass-lang.com):
-  CSS with superpowers
-* [Bourbon](http://bourbon.io):
-  Sass mixin library
-* [Neat](http://neat.bourbon.io):
-  Semantic grid for Sass and Bourbon
-* [Bitters](http://bitters.bourbon.io):
-  Scaffold styles, variables and structure for Bourbon projects.
-* [Middleman Live Reload](https://github.com/middleman/middleman-livereload):
-  Reloads the page when files change
-* [Middleman Deploy](https://github.com/karlfreeman/middleman-deploy):
-  Deploy your Middleman build via rsync, ftp, sftp, or git (deploys to Github Pages by default)
-
-We also recommend [Refills](http://refills.bourbon.io/) for prepackaged interface patterns and [Proteus](http://github.com/thoughtbot/proteus) for a collection of useful
-starter kits to help you prototype faster.
-
-## Getting Started
-
-Set up your project in your code directory
+## Google SpreadSheets Script
 ```
-git clone https://github.com/thoughtbot/proteus-middleman.git your-project-folder
-cd your-project-folder
-git remote rm origin
-git remote add origin your-git-url
+function doGet(e){
+  var project_name = e.parameter.project_name
+  var success_criteria = e.parameter.success_criteria
+  var success_goal = e.parameter.success_goal
+  var drive_url = e.parameter.drive_url
+  var organization_name = e.parameter.organization_name
+  var organization_owner = e.parameter.organization_owner
+  var final_challenge = e.parameter.final_challenge
+  writeData(project_name, success_criteria, success_goal, drive_url, organization_name, organization_owner,final_challenge);
+  returnValue="success";
+  return ContentService.createTextOutput('{"status":200}').setMimeType(ContentService.MimeType.JAVASCRIPT);
+};
+
+function writeData(project_name, success_criteria, success_goal, drive_url, organization_name, organization_owner,final_challenge) {
+  var SPREADSHEET_ID = "18qo9j5hbpsIAs2IKT-N22d8uvgr3IJSlo5HhyhIKMb8"
+  var ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+  var sheet = ss.getActiveSheet();
+  sheet.appendRow([project_name, success_criteria, success_goal, drive_url, organization_name, organization_owner,final_challenge]);
+}
 ```
-
-Install dependencies:
-```
-bundle install
-```
-
-Run the server
-```
-bundle exec middleman
-```
-
-Deploy to Github Pages
-```
-bundle exec middleman deploy
-```
-
-Or install the [Proteus gem](https://github.com/thoughtbot/proteus) and enjoy some shortcuts.
-
-## Directories
-
-Stylesheets, fonts, images, and JavaScript files go in the `/source/assets/` directory.
-Vendor stylesheets and JavaScripts should go in each of their `/vendor/` directories.
-
-## Contributing
-
-If you have problems, please create a
-[GitHub Issue](https://github.com/thoughtbot/proteus-middleman/issues).
-
-Have a fix or want to add a feature?
-[Pull Requests](https://github.com/thoughtbot/proteus-middleman/pulls) are welcome!
-
-## Credits
-
-[![thoughtbot](http://images.thoughtbot.com/bourbon/thoughtbot-logo.svg)](http://thoughtbot.com)
-
-thoughtbot Middleman Starter is maintained and funded by [thoughtbot, inc](http://thoughtbot.com). Thank you to all of [the contributors](https://github.com/thoughtbot/proteus-middleman/contributors)!
 
 ## License
 
