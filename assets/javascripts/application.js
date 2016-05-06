@@ -12,6 +12,7 @@ function getData(){
   output_data["organization_name"] = $('#organization_name').val();
   output_data["organization_owner"] = $('#organization_owner').val();
   output_data["final_challenge"] = $('#final_challenge').val();
+  console.log(output_data)
 };
 
 
